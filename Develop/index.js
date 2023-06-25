@@ -51,4 +51,51 @@ inquirer.prompt([
         message: 'Please enter your email',
         name: 'email'
     }
-]);
+
+// Reffering to the answers users entered in each prompt
+]).then(({ 
+    title,
+    description,
+    installation,
+    usage,
+    contribution,
+    test,
+    license,
+    username,
+    email
+}) => {
+    // Create template layout of generated README file
+    const content = `
+    # title ${title}
+    
+    *[Description](#description)
+    *[Installation](#installation)
+    *[Usage](#usage)
+    *[Contribution](#contribution)
+    *[Test](#test)
+    *[License](#license)
+
+    ## Description
+    ${description}
+
+    ## Installation
+    ${installation}
+
+    ## Usage
+    ${usage}
+
+    ## Contribution
+    ${contribution}
+
+    ## Test
+    ${test}
+
+    ## License
+    ${license}
+
+    ## Questions
+    * Github: ${username}
+    * Email: ${email}
+    * 
+    `
+});
