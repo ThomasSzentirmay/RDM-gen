@@ -1,7 +1,7 @@
 // Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-const generateMarkdown = require("./generateMarkdown");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 // Create an array of questions for user input
 inquirer.prompt([
@@ -65,40 +65,8 @@ inquirer.prompt([
     username,
     email
 }) => {
-    // Create template layout of generated README file
-    const content = generateMarkdown(answers);
-
-    // const content = `
-    // # title ${title}
-    
-    // *[Description](#description)
-    // *[Installation](#installation)
-    // *[Usage](#usage)
-    // *[Contribution](#contribution)
-    // *[Test](#test)
-    // *[License](#license)
-
-    // ## Description
-    // ${description}
-
-    // ## Installation
-    // ${installation}
-
-    // ## Usage
-    // ${usage}
-
-    // ## Contribution
-    // ${contribution}
-
-    // ## Test
-    // ${test}
-
-    // ## License
-    // ${license}
-
-    // ## Questions
-    // * Github: ${username}
-    // * Email: ${email}`;
+    // Pulling markdown template from generateMarkdown file
+    const content = generateMarkdown(content);
 
     // Calling function to create readme
     createNewFile(title, content);
