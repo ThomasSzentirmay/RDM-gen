@@ -17,7 +17,7 @@ inquirer.prompt([
     },
     {
         type: 'input',
-        message: 'Please enter project installtion instructions:',
+        message: 'Please enter project installation instructions:',
         name: 'installation'
     },
     {
