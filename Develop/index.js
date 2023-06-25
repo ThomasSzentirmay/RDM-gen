@@ -54,22 +54,9 @@ inquirer.prompt([
     }
 
     // Reffering to the answers users entered in each prompt
-]).then(({
-    title,
-    description,
-    installation,
-    usage,
-    contribution,
-    test,
-    license,
-    username,
-    email
-}) => {
-    // Pulling markdown template from generateMarkdown file
-    const content = generateMarkdown(content);
-
-    // Calling function to create readme
-    createNewFile(title, content);
+]).then((answers) => {
+    const content = generateMarkdown(answers);
+    createNewFile(answers.title, content);
 });
 
 // Creating file that writes content to markdown file

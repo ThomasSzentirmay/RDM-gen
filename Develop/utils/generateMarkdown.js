@@ -37,10 +37,13 @@ ${renderLicenseLink(license)}`;
 
 // Created a function to generate markdown for README
 function generateMarkdown(data) {
+  const { title, description, installation, usage, contribution, test, license, username, email } = data;
   const licenseBadge = renderLicenseBadge(data.license);
   const licenseSection = renderLicenseSection(data.license);
   return `# title ${title}
     
+  ${licenseBadge}
+
   *[Description](#description)
   *[Installation](#installation)
   *[Usage](#usage)
@@ -63,8 +66,7 @@ function generateMarkdown(data) {
   ## Test
   ${test}
 
-  ## License
-  ${license}
+  ${licenseSection}
 
   ## Questions
   * Github: ${username}
