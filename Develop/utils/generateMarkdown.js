@@ -67,7 +67,7 @@ function generateMarkdown(data) {
   ## Contribution
   ${contribution}
 
-  ## Test
+  ## Tests
   ${test}
 
   ${licenseSection}
