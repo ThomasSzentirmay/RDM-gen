@@ -52,8 +52,8 @@ inquirer.prompt([
         name: 'email'
     }
 
-// Reffering to the answers users entered in each prompt
-]).then(({ 
+    // Reffering to the answers users entered in each prompt
+]).then(({
     title,
     description,
     installation,
@@ -96,17 +96,17 @@ inquirer.prompt([
     ## Questions
     * Github: ${username}
     * Email: ${email}`;
-    
+
     // Calling function to create readme
     createNewFile(title, content);
 });
 
 // Creating file that writes content to markdown file
-function createNewFile (fileName, data) {
+function createNewFile(fileName, data) {
     fs.writeFile(`./${fileName.toLowerCase().split(' ').join('')}.md`, data, (err) => {
-        if(err){
+        if (err) {
             console.log(err);
         }
-        console.log('Your README file has been generated')
+        console.log('Your README file has been generated');
     });
-};
+}
