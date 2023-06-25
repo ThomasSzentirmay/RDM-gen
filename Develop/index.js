@@ -109,4 +109,4 @@ function createNewFile(fileName, data) {
         }
         console.log('Your README file has been generated');
     });
-}
+};
