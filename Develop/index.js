@@ -95,12 +95,13 @@ inquirer.prompt([
 
     ## Questions
     * Github: ${username}
-    * Email: ${email}
-    * 
-    `
+    * Email: ${email}`;
+    
+    // Calling function to create readme
+    createNewFile(title, content);
 });
 
-// Function to write new file
+// Creating file that writes content to markdown file
 function createNewFile (fileName, data) {
     fs.writeFile(`./${fileName.toLowerCase().split(' ').join('')}.md`, data, (err) => {
         if(err){
