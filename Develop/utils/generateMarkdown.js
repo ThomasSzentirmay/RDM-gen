@@ -40,16 +40,19 @@ function generateMarkdown(data) {
   const { title, description, installation, usage, contribution, test, license, username, email } = data;
   const licenseBadge = renderLicenseBadge(data.license);
   const licenseSection = renderLicenseSection(data.license);
-  return `# title ${title}
+  const githubProfileLink = `https://github.com/${data.username}`;
+
+  return `# ${title}
     
   ${licenseBadge}
 
-  *[Description](#description)
-  *[Installation](#installation)
-  *[Usage](#usage)
-  *[Contribution](#contribution)
-  *[Test](#test)
-  *[License](#license)
+  * [Description](#description)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Contribution](#contribution)
+  * [Test](#test)
+  * [License](#license)
+
 
   ## Description
   ${description}
@@ -69,7 +72,8 @@ function generateMarkdown(data) {
   ${licenseSection}
 
   ## Questions
-  * Github: ${username}
+  If you have any questions, feel free to reach out via GitHub or email:
+  * GitHub: [${username}](${githubProfileLink})
   * Email: ${email}`;
 
 
