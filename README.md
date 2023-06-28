@@ -16,7 +16,7 @@
 
   This project was built using node.JS, and is an application that runs entirely in the terminal. When run, the application prompts a series of questions, asking the user for a variety of information regarding their project. This information is then taken, and generated into a proffesionally structured README file that the user can then attach to their Github project.
 
-  Here is a video walkthrough: https://drive.google.com/file/d/1S6c7yN7KVF1QJmiGgCfINFwXXZH2sue5/view?usp=sharingLinks to an external site.
+  Here is a video walkthrough: https://drive.google.com/file/d/1S6c7yN7KVF1QJmiGgCfINFwXXZH2sue5/view?usp=sharingLinks
 
   ## Installation
   To install this project, simply install the depencies I use (inquirer) and then run the files in your cloned version of this repo!
